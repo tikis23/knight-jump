@@ -104,10 +104,11 @@ class Platform extends BaseObject {
   }
 
   update(dt) {
-    if (Math.abs(this.x - this.startX) >= this.moveRange) {
-      this.moveSpeed = -this.moveSpeed;
-    }
-    if (this.x < 0 || this.x + this.width > 1) {
+    if (this.x < 0) {
+      this.moveSpeed = Math.abs(this.moveSpeed);
+    } else if (this.x + this.width > 1) {
+      this.moveSpeed = -Math.abs(this.moveSpeed);
+    } else if (Math.abs(this.x - this.startX) >= this.moveRange) {
       this.moveSpeed = -this.moveSpeed;
     }
     this.x += this.moveSpeed * dt;
