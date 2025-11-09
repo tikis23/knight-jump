@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Knight jump</title>
+  <style>
+    #gameArea {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .canvas-wrapper {
+      width: 100%;
+      max-width: 70vh;
+      aspect-ratio: 3 / 4;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: 1px solid #000;
+      image-rendering: pixelated;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="gameArea">
+    <div class="canvas-wrapper">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
